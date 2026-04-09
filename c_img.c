@@ -5,13 +5,6 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-//duplicated from the header file because it wasn't seeing the header file for some reasons
-struct rgb_img{
-    uint8_t *raster;
-    size_t height;
-    size_t width;
-};
-
 void create_img(struct rgb_img **im, size_t height, size_t width){
     *im = (struct rgb_img *)malloc(sizeof(struct rgb_img));
     (*im)->height = height;
